@@ -13,6 +13,7 @@ public class Facebooksignup {
 		// TODO Auto-generated method stub
 		launchbrowser();
 		creatNewAccount();
+		
 	}
 
 	public static void launchbrowser() {
@@ -25,12 +26,7 @@ public class Facebooksignup {
 
 	public static void creatNewAccount() {
 
-		try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		// WebElement firstName = driver.findElement(By.name("firstname"));
 
 		WebElement firstName = driver.findElement(By.xpath("//input[@placeholder='First name']"));
