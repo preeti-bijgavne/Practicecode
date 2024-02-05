@@ -7,30 +7,40 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Facebooksignup {
 
-	static WebElement driver;
+	static WebDriver driver;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		launchbrowser();
-		creatNewAccount();
-		
+		createNewAccount();
+
 	}
 
 	public static void launchbrowser() {
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.get("https://www.facebook.com");
 		driver.manage().window().maximize();
-		WebElement signUp = driver.findElement(By.linkText("Create new account"));
-		signUp.click();
-	}
+		WebElement createNewAccount = driver.findElement(By.linkText("Create new account"));
+		createNewAccount.click();
+		}
 
-	public static void creatNewAccount() {
-
+	public static void createNewAccount() {
 		
-		// WebElement firstName = driver.findElement(By.name("firstname"));
+		
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-		WebElement firstName = driver.findElement(By.xpath("//input[@placeholder='First name']"));
+		WebElement firstName = driver.findElement(By.xpath("//input[@name='firstname']"));
 		firstName.sendKeys("Preeti");
 
+		WebElement surname = driver.findElement(By.xpath("//input[@name='lastname']"));
+		surname.sendKeys("QA");
+		
+		WebElement emailOrnumber = driver.findElement(By.xpath("//input[@name='reg_email__']"));
+		emailOrnumber.sendKeys("preetiqa07@gmail.com");
 	}
 }
