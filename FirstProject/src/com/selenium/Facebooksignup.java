@@ -58,7 +58,11 @@ public class Facebooksignup {
 		WebElement birthYear = driver.findElement(By.id("year"));
 		birthYear.sendKeys("2005");
 		
-		
+		WebElement genderButton =driver.findElement(By.xpath("//input[@value='1']"));
+		genderButton.click();
+
+		WebElement signUp =driver.findElement(By.xpath("//button[@name='websubmit']"));
+		signUp.click();
 	}
 	
 }
