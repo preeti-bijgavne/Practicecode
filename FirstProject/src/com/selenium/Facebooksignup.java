@@ -25,7 +25,7 @@ public class Facebooksignup {
 		}
 
 	public static void createNewAccount() {
-		
+
 		
 		try {
 			Thread.sleep(4000);
@@ -42,5 +42,23 @@ public class Facebooksignup {
 		
 		WebElement emailOrnumber = driver.findElement(By.xpath("//input[@name='reg_email__']"));
 		emailOrnumber.sendKeys("preetiqa07@gmail.com");
+		
+		WebElement confirmEmail = driver.findElement(By.xpath("//input[@name='reg_email_confirmation__']"));
+		confirmEmail.sendKeys("preetiqa07@gmail.com");
+		
+		WebElement newPassword = driver.findElement(By.id("password_step_input"));
+		newPassword.sendKeys("Teqast@123");
+		
+		WebElement birthDay = driver.findElement(By.id("day"));
+		birthDay.sendKeys("5");
+		
+		WebElement birthMonth =driver.findElement(By.id("month"));
+		birthMonth.sendKeys("May");
+		
+		WebElement birthYear = driver.findElement(By.id("year"));
+		birthYear.sendKeys("2005");
+		
+		
 	}
+	
 }
